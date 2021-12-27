@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portifolio</title>
+     <link rel="stylesheet" href="./style.css">
+ </head>
+<body>
+
+
+    
+    
+        <nav id="brand" class="active" >
+        
+        
+            <p  id="maintext" class="brandtext enorme">
+                Bem vindo ao meu Portifolio
+            </p>
+
+            <p class="brandtext grandinho">
+            Deslize para ver
+            </p>
+
+
+            <ul id="iconsnav" class="grandinho">
+
+                <li class="icon">
+                    
+                    <a>
+                        
+                            <span>
+                                <ion-icon name="code-outline"></ion-icon> 
+                            </span>
+                            <h> Projetos </h>
+                    </a>
+                </li>
+                
+
+                <li class="icon">
+                    
+                    <a>
+                                <span>
+                                    <ion-icon name="reader-outline"></ion-icon>
+                                </span>
+                                <h> Cursos </h>
+                    </a>
+                </li>
+
+                <li class="icon">
+                   
+                    <a> 
+                            <span>
+                                <ion-icon name="book-outline"></ion-icon>
+                            </span>
+                            <h> Certificados </h>
+                    </a>
+                </li>
+
+
+                
+                <li class="icon">
+                    <a href="#SobreMim">
+                        <span>
+                            <ion-icon name="person-outline"></ion-icon> 
+                        </span>
+                        <h> Sobre mim </h>
+                    </a>
+                </li>
+        
+            </ul>
+           
+
+                
+            
+
+</nav>
+
+
+
+            <div id="All">
+
+
+                <div class="topico">
+
+                    <p>   Meus projetos   </p>
+
+                </div>
+
+
+
+                <div id="Projetos">
+
+                        
+
+                   <img src="./2.png" alt="">
+
+                            <div id="dv_desvios">
+                                        <div class="desvios" >
+                                            <p> < </p>
+                                        </div>
+                                        
+                                    
+                        
+                                        <div  class="desvios" >
+                                            <p> > </p>
+                                        </div>
+                                    
+                            </div>
+                
+
+
+                </div>
+
+                
+                <div class="topico">
+
+                    <p>   Meus Certificados   </p>
+
+                </div>
+
+                <div class="topico">
+
+                    <p>   Meus Cursos   </p>
+
+                </div>
+
+
+                <div id="SobreMim"class="topico">
+
+                    <p>   Sobre Mim   </p>
+                    
+                </div>
+
+
+                <div style="display: flex; justify-content: center; background-color: rgb(34, 40, 46);
+                padding: 20px;">
+                            
+                    
+                            <div class="textos">
+
+                                <p>
+                                    Estudante de Engenharia Mecatrônica e Análise e Desenvolvimento de Sistemas, possuo muita vontade de aprender e seguir carreira em desenvolvimento web.
+                                </p>
+                                
+                                
+                                <p> Sendo que minhas linguagens e bibliotecas favoritas são React, Node, Javascript. </p>
+                                
+                                
+                                <p>                     
+                                    Todos os projetos acima fiz por gosto da área. Ademais, aprendi essas linguagens de forma autodidata.
+                                </p>
+            
+                            </div>
+                
+                            
+                </div>
+
+
+
+                <footer>
+
+
+                    <ul>
+                        <li>
+                            <a href="https://www.linkedin.com/in/gabriel-martins-089678185/">
+                                <span class="iconsend">
+                                    <ion-icon name="logo-linkedin"></ion-icon>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/ter-9001">
+                                <span class="iconsend">
+                                    <ion-icon name="logo-github"></ion-icon>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://api.whatsapp.com/send?phone=5548984274899">
+                                <span class="iconsend">
+                                    <ion-icon name="logo-whatsapp"></ion-icon>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </footer>
+
+
+
+             </div>
+
+
+
+ 
+    <div id="brand2">
+    
+
+    </div>
+
+
+    
+
+       
+       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script>
+
+
+function  Load()
+        {
+            Array.from(document.getElementsByClassName("brandtext")).forEach(element => {
+                
+                element.classList.add("up")
+                 
+
+            });
+
+
+
+
+        }
+
+
+        window.onload = Load;
+
+        window.onscroll = () => 
+        {
+            if(window.scrollY > 0)
+            {
+                Array.from(
+                document.getElementsByClassName("brandtext")
+               ).forEach(
+                    (element) => {
+
+                        
+                        element.style.transition = '1.5s';
+                        element.style.transform = 'translateY(-180px)';
+                        
+                   }
+               )
+               
+               
+                var brand = document.getElementById("brand");
+                brand.classList.remove("active");
+                brand.classList.add("off");
+                
+               
+               
+
+
+                var iconsnav= document.getElementById("iconsnav").style;
+
+
+                iconsnav.transition = '1s';
+                iconsnav.transform = 'translateY(10px)'
+
+                
+                var brand2 = document.getElementById("brand2").style;
+                
+                
+                brand2.transition = '1.5s';
+                brand2.transform = 'translateY(1000px)';
+                brand2.display = 'none';
+
+
+                var Projetos = document.getElementById("All");
+
+                Projetos.classList.add("active");
+
+
+                Array.from(
+                document.getElementsByClassName("topico")
+               ).forEach(
+                    (element) => {
+
+                        
+                        element.classList.add("active");
+                        
+                   }
+               )
+
+            }
+        }
+
+
+
+</script>
+
+</body>
+</html>
