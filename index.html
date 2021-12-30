@@ -82,6 +82,15 @@
             <div id="All">
 
 
+                <button id="toHome">
+
+                    <a href="#All">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </a>
+                    
+                </button>
+
+
                 <div class="topico">
 
                     <p>   Meus projetos   </p>
@@ -94,16 +103,16 @@
 
                         
 
-                   <img src="./2.png" alt="">
+                   <img id="slide" src="./2.png" alt="">
 
                             <div id="dv_desvios">
-                                        <div class="desvios" >
+                                        <div id= "paratras" class="desvios" >
                                             <p> < </p>
                                         </div>
                                         
                                     
                         
-                                        <div  class="desvios" >
+                                        <div id= "parafrente" class="desvios" >
                                             <p> > </p>
                                         </div>
                                     
@@ -124,7 +133,63 @@
 
                     <p>   Meus Cursos   </p>
 
+
+
                 </div>
+
+
+                <div style="display:flex; justify-content: space-between; align-items: center;">
+
+                        <div class="curso">
+
+                            <img src="automacao-industrial-custo-fabrica-1080x620.png" alt="">
+
+                            <div class= 'textodocurso'>
+
+                                 <p style="font-size: 30px;">
+                                      Engenharia Mecatrônica
+                                 </p>
+
+
+                                 <p style="font-size: 20px;">
+
+                                    O profissional formado em Engenharia Mecatrônica pode criar e aplicar projetos de automação em indústrias. Ele é capaz de operar, construir e dar manutenção nos mais diversos tipos de máquinas, além de projetar sistemas para controle de equipamentos em prédios comerciais e residenciais. (guiadacarreira, 2021)
+
+                                 </p>
+
+                            </div>
+      
+                          </div>
+                    
+
+                        <div class="curso">
+
+                            <img src="código-fonte-e-papel-de-parede-do-desktop-pela-linguagem-programação-com-codi-124708208.jpg" alt="">
+
+                            <div class= 'textodocurso'>
+
+                                <p style="font-size: 30px;">
+                                    Análise e Desenvolvimento de Sistemas
+                                </p>
+
+
+                                <p style="font-size: 20px;">
+
+                                    O curso de Análise e Desenvolvimento de Sistemas forma profissionais capazes de desenvolver, analisar, projetar, implementar e atualizar sistemas de informação para diversos setores de atividades.
+
+                                    Ao final do curso, a pessoa se qualifica para a criação de sistemas informatizados, com conhecimento de programação dos mais diversos tipos e linguagens operacionais. (querobolsa, 2021)
+
+                                </p>
+
+                        </div>
+ 
+
+
+                    </div> 
+
+                </div>
+
+
 
 
                 <div id="SobreMim"class="topico">
@@ -145,11 +210,11 @@
                                 </p>
                                 
                                 
-                                <p> Sendo que minhas linguagens e bibliotecas favoritas são React, Node, Javascript. </p>
+                                <p> Sendo que minhas linguagens e bibliotecas favoritas são React, Javascript, HTML, CSS. </p>
                                 
                                 
                                 <p>                     
-                                    Todos os projetos acima fiz por gosto da área. Ademais, aprendi essas linguagens de forma autodidata.
+                                    Todos os projetos acima fiz por gosto da área. incluindo a construção desse site.
                                 </p>
             
                             </div>
@@ -164,21 +229,22 @@
 
                     <ul>
                         <li>
-                            <a href="https://www.linkedin.com/in/gabriel-martins-089678185/">
+                            <a href="https://www.linkedin.com/in/gabriel-martins-089678185/" 
+                            target="_blank">
                                 <span class="iconsend">
                                     <ion-icon name="logo-linkedin"></ion-icon>
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://github.com/ter-9001">
+                            <a href="https://github.com/ter-9001" target="_blank">
                                 <span class="iconsend">
                                     <ion-icon name="logo-github"></ion-icon>
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://api.whatsapp.com/send?phone=5548984274899">
+                            <a href="https://api.whatsapp.com/send?phone=5548984274899" target="_blank">
                                 <span class="iconsend">
                                     <ion-icon name="logo-whatsapp"></ion-icon>
                                 </span>
@@ -206,85 +272,11 @@
        
        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+       <script src="./index.js"></script>
 
 <script>
 
 
-function  Load()
-        {
-            Array.from(document.getElementsByClassName("brandtext")).forEach(element => {
-                
-                element.classList.add("up")
-                 
-
-            });
-
-
-
-
-        }
-
-
-        window.onload = Load;
-
-        window.onscroll = () => 
-        {
-            if(window.scrollY > 0)
-            {
-                Array.from(
-                document.getElementsByClassName("brandtext")
-               ).forEach(
-                    (element) => {
-
-                        
-                        element.style.transition = '1.5s';
-                        element.style.transform = 'translateY(-180px)';
-                        
-                   }
-               )
-               
-               
-                var brand = document.getElementById("brand");
-                brand.classList.remove("active");
-                brand.classList.add("off");
-                
-               
-               
-
-
-                var iconsnav= document.getElementById("iconsnav").style;
-
-
-                iconsnav.transition = '1s';
-                iconsnav.transform = 'translateY(10px)'
-
-                
-                var brand2 = document.getElementById("brand2").style;
-                
-                
-                brand2.transition = '1.5s';
-                brand2.transform = 'translateY(1000px)';
-                brand2.display = 'none';
-
-
-                var Projetos = document.getElementById("All");
-
-                Projetos.classList.add("active");
-
-
-                Array.from(
-                document.getElementsByClassName("topico")
-               ).forEach(
-                    (element) => {
-
-                        
-                        element.classList.add("active");
-                        
-                   }
-               )
-
-            }
-        }
 
 
 
