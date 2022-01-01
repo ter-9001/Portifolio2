@@ -179,6 +179,20 @@ a
 
 
 
+.titulodocurso
+{
+    font-size: 30px; 
+    color: grey
+}
+
+
+.descricaocurso
+{
+    font-size: 20px;
+}
+
+
+
 [name = "code-outline"]:hover
 {
     background-color: rgb(91, 255, 91);
@@ -297,8 +311,6 @@ a
 
 #dv_desvios
 {
-    position: absolute;
-    top: 50%; right: 10px; left: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -363,6 +375,7 @@ footer
     bottom: 20px;
     left: 20px;
     opacity: 0.3;
+    z-index: 1000;
     
 
 }
@@ -441,7 +454,7 @@ div.curso
 
 div.textodocurso
 {
-    background: white;
+    background: #0e1538;
     width: 600px; 
     height: 300px; 
     margin: 20px;
@@ -450,7 +463,7 @@ div.textodocurso
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    color: white;
    
 }
 
@@ -464,6 +477,11 @@ div.curso img
 
 
 
+#cursos
+{
+    display:flex; justify-content: space-between; align-items: center;
+    background: #0e1538;
+}
 
 .textodocurso
 {
@@ -495,8 +513,9 @@ div.curso img
     border: none;
     z-index: 1000;
     position: fixed;
-    bottom: 20px; right: 20px;
+    bottom: 30px; right: 20px;
     opacity: 0.3;
+    margin: 0;
     
   
 }
@@ -511,6 +530,7 @@ div.curso img
     font-size: 30px;
     color: white;
 }
+
 
 .gradiente
 {
@@ -584,4 +604,250 @@ ul{
 .gradiente div a
 {
    text-transform: capitalize;
+}
+
+#menutiny
+{
+     display: 'none';   
+}
+
+
+@media(max-width: 999px) {
+    
+
+    .grandinho
+    {
+        font-size: 10px;
+    }
+
+    .enorme,
+    .topico.active
+    {
+        font-size: 30px;
+    }
+
+
+    .desvios
+    {
+        font-size: 30px;
+    }
+
+    .gradiente
+    {
+        width: 100px;
+        height: 100px;
+    }
+
+    #cursos
+    {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    
+
+    
+
+}
+
+
+
+@media(max-width: 800px) {
+    
+
+    .grandinho
+    {
+        font-size: 10px;
+    }
+
+    .enorme
+    {
+        font-size: 20px;
+    }
+
+
+
+    #certificados
+    {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #certificados ul
+    {
+        width: 100%;
+    }
+
+    .gradiente
+    {
+        width: 100%;
+    }
+
+    .gradiente div
+    {
+        flex-direction: row;
+        width: 100%;
+     
+    }
+
+    .gradiente div p
+    {
+        margin-right: 10px;
+    }
+
+
+
+
+
+
+}
+
+
+@media(max-width: 600px) {
+    
+    
+
+    div.curso img
+    {
+        width: 90%;
+        height: auto;
+    }
+
+    .textodocurso.active
+    {
+        margin-left: -100px;
+    }
+
+
+    .titulodocurso
+    {
+        font-size: 20px; 
+        
+        width: 60%;
+    }
+
+
+    .descricaocurso
+    {
+        font-size: 15px;
+        width: 60%;
+    }
+
+
+
+}
+
+@media(max-width: 500px) {
+    
+
+    .grandinho
+    .enorme
+    {
+        font-size: 10px;
+    }
+
+
+    #iconsnav
+    {
+        display: none;
+    }
+    
+    #iconsnav.active
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        top: 30%; right: 10px; left: 10px;
+        background: #0e1538;
+        padding-top: 90px;
+        width: 90%;
+
+
+        
+    }
+
+    #dv_desvios
+    {
+        margin-top: -30px;
+    }
+
+    #iconsnav.active li
+    {
+        width: 80%;
+    }
+
+    #iconsnav.active li a
+    {
+        flex-direction: row;
+        margin-bottom: 20px;
+        width: 100%;
+        font-size: 40px;
+        border-bottom: 1px solid #5f6368;
+        
+    }
+
+    #iconsnav.active:hover span
+    {
+       transform: translateY(0);
+           
+    }
+
+    #iconsnav.active:hover h
+    {
+        transform: translateY(0);
+        
+    }
+
+    #menutiny.on
+    {
+        position: absolute;
+        top: 10px; right:20px;
+        z-index: 1000;
+        background-color: #74757a;
+        width: 50px;
+        height: 50px;
+        display: block;
+
+    }
+
+
+    #menutiny.on:before
+    {
+        content: ' ';
+        position: absolute;
+        background: white;
+        transform: translateY(10px);
+        transition: 0.25s;
+        width: 50px; height: 2px;
+        box-shadow: 0 15px 0 white;
+    
+    }
+
+    #menutiny.on::after
+    {
+        content: ' ';
+        position: absolute;
+        background: white;
+        transform: translateY(40px);
+        transition: 0.25s;
+        width: 50px; height: 2px;
+    
+    }
+
+    #menutiny.on.active::before
+    {
+        transform: translateY(25px) rotate(45deg);
+        box-shadow: none;
+    }
+
+    #menutiny.on.active::after
+    {
+        
+        transform: translateY(25px) rotate(-45deg);
+    }
+
+ 
+
+
 }

@@ -134,8 +134,8 @@ function  Load()
                 var Projetos = document.getElementById("All");
 
                 Projetos.classList.add("active");
-
-
+                document.getElementById("menutiny").classList.toggle("on");
+    
                 Array.from(
                 document.getElementsByClassName("topico")
                ).forEach(
@@ -188,8 +188,9 @@ function  Load()
 
             setTimeout( () => {
 
-                style.visibility = 'visible';
                 slide('-');
+                
+                style.visibility = 'visible';
                 slideMoveTo(style, '2s', 'translateX(0px)')
             
 
@@ -252,8 +253,8 @@ function  Load()
 
         if( mode == '+' && currentSlide < 6)
         {
-            document.getElementById("slide").src = "./"+ currentSlide + ".png"
             currentSlide++;
+            document.getElementById("slide").src = "./"+ currentSlide + ".png"
             return;
         }
 
@@ -266,8 +267,9 @@ function  Load()
 
         if( mode == '-' && currentSlide > 1)
         {
-            document.getElementById("slide").src = "./"+ currentSlide + ".png"
+
             currentSlide--;
+            document.getElementById("slide").src = "./"+ currentSlide + ".png"
             return;
         }
 
@@ -280,3 +282,22 @@ function  Load()
         }
 
    }
+
+
+  // navbar
+
+  document.getElementById("menutiny").onclick = () => 
+  {
+    document.getElementById("menutiny").classList.toggle("active");
+    document.getElementById("iconsnav").classList.toggle("active");
+
+  }
+
+  document.getElementById("iconsnav").onclick = () =>
+  {
+    document.getElementById("iconsnav").classList.remove("active");
+    document.getElementById("menutiny").classList.remove("active");
+ }
+
+
+
