@@ -188,8 +188,16 @@ function  Load()
 
             setTimeout( () => {
 
+                let antigo = src;
                 slide('-');
+                let novo = 0;
                 
+                while(novo == antigo)
+                {
+                    novo = src;
+                }
+
+
                 style.visibility = 'visible';
                 slideMoveTo(style, '2s', 'translateX(0px)')
             
@@ -225,10 +233,18 @@ function  Load()
 
             setTimeout( () => {
 
-                style.visibility = 'visible';
+                let antigo = src;
                 slide('+');
+                let novo = 0;
+                
+                while(novo == antigo)
+                {
+                    novo = src;
+                }
+
+
+                style.visibility = 'visible';
                 slideMoveTo(style, '2s', 'translateX(0px)')
-            
 
             }, 2700)
             
