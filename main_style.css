@@ -108,7 +108,7 @@ a
 {
     display: flex;
     list-style: none;
-    position: absolute;
+    position: fixed;
     flex-direction: row;
     top: 0; right:20px;
     z-index: 1000;
@@ -308,6 +308,28 @@ a
     background: #0e1538;
 }
 
+#divslide
+{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+
+#textoslide
+{
+    position: absolute;
+    top: 400px; left: 5px;
+    color: grey;
+    font-weight: 600;
+
+}
+
+#textoslide p
+{
+    margin: 5px;
+    padding: 0;
+}
 
 #dv_desvios
 {
@@ -697,7 +719,47 @@ ul{
     }
 
 
+    #divslide
+    {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: static;
+    }
 
+    #divslide img
+    {
+        margin-bottom: 12px;
+
+    }
+
+    #textoslide
+    {
+        color: grey;
+        font-weight: 600;
+        position: static;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #textoslide p
+    {
+        margin: 5px;
+        padding: 0;
+    }
+
+    #textoslide p.enorme
+    {
+        font-size: 30px;
+    }
+
+    #textoslide p.grandinho
+    {
+        font-size: 20px;
+    }
 
 
 

@@ -1,3 +1,35 @@
+
+const dados = [
+    {
+        Título:"Gabriel",
+        Descrição: ""
+    },
+    {
+        Título:"",
+        Descrição: ""
+    },
+    {
+        Título:"",
+        Descrição: ""
+    },
+    {
+        Título:"",
+        Descrição: ""
+    },
+    {
+        Título:"",
+        Descrição: ""
+    },
+    {
+        Título:"",
+        Descrição: ""
+    }];
+
+document.getElementById("tituloprojeto").innerHTML = dados[0].Título;
+
+
+
+
 Array.from(
         document.getElementsByClassName("curso")
     ).forEach(
@@ -12,8 +44,6 @@ Array.from(
                 for(i = 0; i < elems.length; i++) {
                     if (elems[i].className == "textodocurso" || elems[i].className == "textodocurso desactive" ) {
                         
-                        console.log("Em cima")
-                        console.log(elems[i]);
                         elems[i].style.visibility = "visible";
                         elems[i].classList.remove("desactive");
 
@@ -39,22 +69,17 @@ Array.from(
             
             element.addEventListener("mouseout", () =>
             {
-                console.log("EI");
-                console.log();
-
+               
                 for (i = 0; i < elems.length; i++) {
                     
-                    console.log(elems[i]);
-
+                    
                     if(elems[i].className == "textodocurso active") {
                         
-                        console.log("indo...");
                             elems[i].classList.remove("active");
 
                             elems[i].classList.add("desactive");
                             elems[i].style.visibility = "hidden";
-                            console.log(elems[i]);
-
+                    
                        
                         
                         break;
@@ -93,8 +118,7 @@ function  Load()
             if(window.scrollY > 0)
             {
 
-                console.log("scroll", window.scrollY)
-
+             
                 Array.from(
                 document.getElementsByClassName("brandtext")
                ).forEach(
@@ -170,7 +194,6 @@ function  Load()
 
             
                 
-            console.log("Indo");
             
             slideMoveTo(style, '2s', 'translateX(-100px)')
             style.visibility = 'hidden';
@@ -215,7 +238,6 @@ function  Load()
 
             
                 
-            console.log("Indo");
             
             slideMoveTo(style, '2s', 'translateX(100px)')
             style.visibility = 'hidden';
@@ -265,8 +287,7 @@ function  Load()
    function slide(mode)
    {
         
-    console.log(currentSlide);
-
+   
         if( mode == '+' && currentSlide < 6)
         {
             currentSlide++;
