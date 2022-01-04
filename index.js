@@ -1,31 +1,36 @@
 
 const dados = [
     {
-        Título:"Gabriel",
-        Descrição: ""
+        Título:"Facebook",
+        Descrição: "Página em PHP, baseado no layout do Facebook "+
+        " em que é possível publicar imagens, vídeos e texto."
     },
     {
-        Título:"",
-        Descrição: ""
+        Título:"Ecommerce",
+        Descrição: "Página feite em React, onde é possível organizar os"+
+        " games por score, preço e ordem alfabetica"
     },
     {
-        Título:"",
-        Descrição: ""
+        Título:"Instagram",
+        Descrição: "Imitação da página de Login do Instagram, feita em HTML e CSS"
     },
     {
-        Título:"",
-        Descrição: ""
+        Título:"Jogo Genius",
+        Descrição: "Jogo em que apareçe uma ordem de cores e o usuário deve selecionar a forma que"+
+        " essa ordem apareceu, feito em Javascript"
     },
     {
-        Título:"",
-        Descrição: ""
+        Título:"Jogo do Helicoptero",
+        Descrição: "Jogo em que salva uma vítima e atira e desvia do inimigo, feito em Javascript"
     },
     {
-        Título:"",
-        Descrição: ""
+        Título:"Jogo da Roleta",
+        Descrição: "Imitação do Jogo pra girar tem que ganhar do Silvio Santos,"+ 
+        " feito em Node"
     }];
 
 document.getElementById("tituloprojeto").innerHTML = dados[0].Título;
+document.getElementById("descricaoprojeto").innerHTML = dados[0].Descrição;
 
 
 
@@ -291,7 +296,9 @@ function  Load()
         if( mode == '+' && currentSlide < 6)
         {
             currentSlide++;
-            document.getElementById("slide").src = "./"+ currentSlide + ".png"
+            document.getElementById("slide").src = "./"+ currentSlide + ".png";
+            document.getElementById("tituloprojeto").innerHTML = dados[currentSlide-1].Título;
+            document.getElementById("descricaoprojeto").innerHTML = dados[currentSlide-1].Descrição;
             return;
         }
 
@@ -299,6 +306,8 @@ function  Load()
         {
             currentSlide=1;
             document.getElementById("slide").src = "./"+ currentSlide + ".png"
+            document.getElementById("tituloprojeto").innerHTML = dados[currentSlide-1].Título;
+            document.getElementById("descricaoprojeto").innerHTML = dados[currentSlide-1].Descrição;
             return;
         }
 
@@ -307,6 +316,8 @@ function  Load()
 
             currentSlide--;
             document.getElementById("slide").src = "./"+ currentSlide + ".png"
+            document.getElementById("tituloprojeto").innerHTML = dados[currentSlide-1].Título;
+            document.getElementById("descricaoprojeto").innerHTML = dados[currentSlide-1].Descrição;
             return;
         }
 
@@ -314,7 +325,8 @@ function  Load()
         {
             currentSlide = 6;
             document.getElementById("slide").src = "./"+ currentSlide + ".png"
-            
+            document.getElementById("tituloprojeto").innerHTML = dados[currentSlide-1].Título;
+            document.getElementById("descricaoprojeto").innerHTML = dados[currentSlide-1].Descrição;
             return;
         }
 

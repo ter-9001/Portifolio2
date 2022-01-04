@@ -189,6 +189,7 @@ a
 .descricaocurso
 {
     font-size: 20px;
+    
 }
 
 
@@ -322,12 +323,16 @@ a
     top: 400px; left: 5px;
     color: grey;
     font-weight: 600;
+    background: rgba(121, 111, 111, 0.322);
+    width: 30%;
+    border-radius: 10%;
 
 }
 
 #textoslide p
 {
     margin: 5px;
+    margin-left: 15px;
     padding: 0;
 }
 
@@ -742,6 +747,8 @@ ul{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
+        background: fixed;
 
     }
 
@@ -794,6 +801,7 @@ ul{
     {
         font-size: 15px;
         width: 60%;
+        
     }
 
 
@@ -844,7 +852,7 @@ ul{
         flex-direction: row;
         margin-bottom: 20px;
         width: 100%;
-        font-size: 40px;
+        font-size: 25px;
         border-bottom: 1px solid #5f6368;
         
     }
