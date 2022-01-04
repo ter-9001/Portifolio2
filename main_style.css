@@ -1,3 +1,11 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+
+
 a
 {
     text-decoration: none;
@@ -21,7 +29,7 @@ a
 #brand.active
 {
     position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
+    top: 0; right: 0; bottom: 0; 
     display: flex;
     align-items: center;
     text-align: center;
@@ -350,7 +358,7 @@ a
 #slide
 {
     height: auto;
-    width: 90%;
+    width: 100%;
     margin: 0px;
     padding: 0;
     margin-top: 90px;
@@ -363,12 +371,14 @@ a
     display: flex;
     align-self: center;
     align-items: center;
-    font-size: 90px;
+    font-size: 70px;
     margin: 0px;
     font-weight: 600;
     color: grey;
     padding: 1.4px;
     height: 200px;
+    margin: 0px;
+    
 }
 
 .desvios:hover
@@ -484,7 +494,6 @@ div.textodocurso
     background: #0e1538;
     width: 600px; 
     height: 300px; 
-    margin: 20px;
     position: absolute;
     top: 90px; left: -600px;
     display: flex;
@@ -499,7 +508,7 @@ div.curso img
 {
     width: 600px; 
     height: 300px; 
-    margin: 20px;
+    
 }
 
 
